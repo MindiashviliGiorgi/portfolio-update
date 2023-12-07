@@ -2,11 +2,11 @@
   width: 100%;
   min-height: 100vh;
   position: relative;
+  padding: 50px 150px;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 50px 150px;
-  overflow: hidden;
   .home-page-left {
     display: flex;
     flex-direction: column;

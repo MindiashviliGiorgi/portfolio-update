@@ -6,6 +6,8 @@
   justify-content: right;
   padding: 140px 150px 0px 150px;
   position: relative;
+  opacity: 0;
+  transition: 0.7s;
   .about {
     display: flex;
     flex-direction: column;

@@ -9,6 +9,7 @@ import { AboutPageComponent } from './about-page/about-page.component';
 import { ProjectsPageComponent } from './projects-page/projects-page.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
 import { FormsModule } from '@angular/forms';
+import { MainPageComponent } from './main-page/main-page.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { FormsModule } from '@angular/forms';
     HomePageComponent,
     AboutPageComponent,
     ProjectsPageComponent,
-    ContactPageComponent
+    ContactPageComponent,
+    MainPageComponent
   ],
   imports: [
     BrowserModule,
