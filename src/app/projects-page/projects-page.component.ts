@@ -1,4 +1,4 @@
-import { Component} from '@angular/core';
+import { Component, ElementRef, HostListener} from '@angular/core';
 
 
 @Component({
@@ -8,11 +8,38 @@ import { Component} from '@angular/core';
 })
 export class ProjectsPageComponent {
 
-  constructor(){}
+  constructor(private el : ElementRef){}
 
   ngOnInit():void {};
 
-  
+  ngAfterViewInit() {
+    this.onScrollAnimation()
+  }
+
+  @HostListener("document:scroll")
+  onScrollAnimation() {
+    const titleDiv = this.el.nativeElement.querySelector('.projects-title');
+    const projectsDiv = this.el.nativeElement.querySelector('.projects-list');
+
+    let pos = document.documentElement.scrollTop;
+    let calcHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    let scrollValue = Math.round((pos * 100) / calcHeight);
+
+    if (scrollValue > 69) {
+      titleDiv.style.left = '0px';
+      titleDiv.style.opacity = '1';
+
+      projectsDiv.style.right = '0px';
+      projectsDiv.style.opacity = '1';
+    } else if (scrollValue < 69) {
+      titleDiv.style.left = '-700px';
+      titleDiv.style.opacity = '0';
+
+      projectsDiv.style.right = '-700px';
+      projectsDiv.style.opacity = '0';
+    }
+
+  }
 
   container: number = 1;
 
