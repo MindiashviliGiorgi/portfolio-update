@@ -1,0 +1,185 @@
+<div class="projects-page-main">
+  <div class="projects-title">
+    <h2>PROJECTS</h2>
+    <p>
+      Each projects is a unique piece of development
+      <img [src]="'/assets/images/ppr.png'"/>
+    </p>
+  </div>
+  <div class="projects-list">
+    <!-- GM Railway -->
+    <div class="container fade" *ngIf="container === 1">
+      <div class="container-left">
+        <img [src]="'/assets/images/rwc.jpg'"/>
+        <div class="decore">
+          <img [src]="'/assets/images/projects_corner.png'">
+        </div>
+      </div>
+      <div class="container-right">
+        <div class="title">
+          <h3>GM Railway</h3>
+        </div>
+        <div class="about">
+          <p>
+            I used a form divided into several components, which were connected to each other through LocalStorage.
+            I sent the final result as a complete ticket to Firebase, and from there, users could obtain a specific 
+            ticket using a unique reference number, allowing them to cancel or delete the ticket. Also you can convert
+            final ticket as a PDF file for save information. The website 
+            is full responsive.
+          </p>
+        </div>
+        <div class="tools">
+          <img [src]="'/assets/images/angular.png'">
+          <img [src]="'/assets/images/firebase.png'">
+        </div>
+        <div class="btns">
+          <button>
+            <a href="https://github.com/MindiashviliGiorgi/gm-railway" target="_blank">Code</a>
+          </button>
+          <button>
+            <a href="https://railway-gm.web.app/" target="_blank">Live</a>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- TRAVEL MORE  -->
+    <div class="container fade" *ngIf="container === 2">
+      <div class="container-left">
+        <img [src]="'/assets/images/MyTravelMorePic.jpg'"/>
+        <div class="decore">
+          <img [src]="'/assets/images/projects_corner.png'">
+        </div>
+      </div>
+      <div class="container-right">
+        <div class="title">
+          <h3>Travel More</h3>
+        </div>
+        <div class="about">
+          <p>
+            Website is for people who love to travel and want to book 
+            hotels online. This website is Full-Stack work Angular/Firebase. 
+            You can log in and register on our website and you can also add 
+            your hotels which means you will be able to use admin panel system. 
+            Working search and all single details.
+            Full website is responsive on the iPhone 12 Pro.
+          </p>
+        </div>
+        <div class="tools">
+          <img [src]="'/assets/images/angular.png'">
+          <img [src]="'/assets/images/firebase.png'">
+        </div>
+        <div class="btns">
+          <button>
+            <a href="https://github.com/MindiashviliGiorgi/Travel-More-Angular" target="_blank">Code</a>
+          </button>
+          <button>
+            <a href="https://travelgm-2b9da.web.app/?fbclid=IwAR2DdipCELec04ZRprgQjv01N-EdprNCxYRtHAVYzG1v9aszP3Djhk7drpg" target="_blank">Live</a>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- PROJECT 4 -->
+    <div class="container fade" *ngIf="container === 3">
+      <div class="container-left">
+        <img [src]="'/assets/images/project-4-.bmp'"/>
+        <div class="decore">
+          <img [src]="'/assets/images/projects_corner.png'">
+        </div>
+      </div>
+      <div class="container-right">
+        <div class="title">
+          <h3>Gaming Web</h3>
+        </div>
+        <div class="about aboutx">
+          <p>
+            On this website you can purchase computer games. You can
+            register your account then log in and log out anytime you
+            want. Also you'll see a small header which can help you to search
+            the product by it's price, name or year of release. When you
+            click on the product name you will get the full information about
+            the game. If you want to purchase a product you will need to log
+            in first then search for the game and add it to cart so you can pay.
+            Web is full responsive The idea and design of the site is entirely my
+            own.
+          </p>
+        </div>
+        <div class="tools">
+          <img [src]="'/assets/images/angular.png'">
+          <img [src]="'/assets/images/firebase.png'">
+        </div>
+        <div class="btns">
+          <button>
+            <a href="https://github.com/MindiashviliGiorgi/project-4-gaming" target="_blank">Code</a>
+          </button>
+          <button>
+            <a href="https://project-4-gm.web.app/" target="_blank">Live</a>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- GMF SHOP -->
+    <div class="container fade" *ngIf="container === 4">
+      <div class="container-left">
+        <img [src]="'/assets/images/ff.bmp'"/>
+        <div class="decore">
+          <img [src]="'/assets/images/projects_corner.png'">
+        </div>
+      </div>
+      <div class="container-right">
+        <div class="title">
+          <h3>Football Shop</h3>
+        </div>
+        <div class="about">
+          <p style="line-height: 21px;">
+            The website is for an online store for football items, Find 
+            the desired product, add it to the cart and finally buy it, 
+            Both the idea and design of the website are full responsive 
+            including 375px, 1 used Angular(HTML5, SCSS, TypeScript, Firebase) 
+            to build a site. There is a header on the product pages, which makes 
+            it easier to choose the desired item According to brand, name and price 
+            increase or lack. We can add product to cart from product pages and also 
+            delete it, as you wish.
+          </p>
+        </div>
+        <div class="tools">
+          <img [src]="'/assets/images/angular.png'">
+          <img [src]="'/assets/images/firebase.png'">
+        </div>
+        <div class="btns">
+          <button>
+            <a href="https://github.com/MindiashviliGiorgi/gm-f-shop" target="_blank">Code</a>
+          </button>
+          <button>
+            <a href="https://gmf-shop.web.app/" target="_blank">Live</a>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="perv-btn" *ngIf="container > 1">
+      <button (click)="previousContainer()">
+        <img src="/assets/images/arrow.png">
+      </button>
+    </div>
+    <div class="next-btn" *ngIf="container < 4">
+      <button (click)="nextContainer()">
+        <img src="/assets/images/arrow.png">
+      </button>
+    </div>
+    <div class="dots">
+      <div class="dots-btn">
+        <button (click)="previousContainer()">
+          <img src="/assets/images/arrow.png">
+        </button>
+      </div>
+      <div class="dot fade" (click)="container = 1" [class.dot_active]="container === 1"></div>
+      <div class="dot fade" (click)="container = 2" [class.dot_active]="container === 2"></div>
+      <div class="dot fade" (click)="container = 3" [class.dot_active]="container === 3"></div>
+      <div class="dot fade" (click)="container = 4" [class.dot_active]="container === 4"></div>
+      <div class="dots-btn">
+        <button (click)="nextContainer()">
+          <img src="/assets/images/arrow.png" style="transform: rotate(0deg);">
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,333 @@
+.about-page-main {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: top;
+  justify-content: right;
+  padding: 140px 150px 0px 150px;
+  position: relative;
+  .about {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    row-gap: 15px;
+    width: 750px;
+    height: auto;
+    .title-text {
+      display: flex;
+      flex-direction: column;
+      row-gap: 15px;
+      margin-bottom: 119px;
+      .title {
+        h2 {
+          color: #27F4E0;
+          font-weight: 500;
+          letter-spacing: 0.5px;
+        }
+      }
+      .about-text {
+          p {
+          font-size: 18px;
+          color: #fff;
+          letter-spacing: 0.7px;
+          line-height: 25px;
+        }
+      }
+    }
+    .tech-stack {
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+      .tech-title {
+        color: #27F4E0;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+      }
+      .tech-containers {
+        display: flex;
+        flex-direction: row;
+        column-gap: 20px;
+        align-items: center;
+        .container {
+          display: flex;
+          flex-direction: column;
+          row-gap: 5px;
+          width: 90px;
+          height: 90px;
+          border: 1px solid #27F4E0;
+          border-radius: 4px;
+          align-items: center;
+          padding: 5px;
+          .container-icon {
+            img {
+              width: 45px;
+              height: 45px;
+              object-fit: cover;
+            }
+          }
+          .container-name {
+            p {
+              color: #fff;
+              font-size: 15px;
+              letter-spacing: 0.5px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .decore {
+    position: absolute;
+    left: 0;
+    top: -95px;
+    z-index: -1;
+    img {
+      width: 1500px;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+}
+
+
+@media(max-width : 1530px){
+  .about-page-main {
+    .decore {
+      img {
+        width: 1400px;
+      }
+    }
+  }
+}
+@media(max-width : 1490px){
+  .about-page-main {
+    .decore {
+      top: -45px;
+      img {
+        width: 1300px;
+      }
+    }
+  }
+}
+@media(max-width : 1453px){
+  .about-page-main {
+    .decore {
+      top: 23px;
+      img {
+        width: 1180px;
+      }
+    }
+  }
+}
+@media(max-width : 1400px){
+  .about-page-main {
+    padding: 140px 50px 0px 50px;
+    .decore {
+      top: 23px;
+      img {
+        width: 1180px;
+      }
+    }
+  }
+}
+@media(max-width : 1310px){
+  .about-page-main {
+    .about {
+      .title-text {
+        margin-bottom: 50px;
+      }
+    }
+    padding: 140px 50px 0px 50px;
+    .decore {
+      top: -2px;
+      img {
+        width: 1100px;
+      }
+    }
+  }
+}
+@media(max-width : 1275px){
+  .about-page-main {
+    .about {
+      .title-text {
+        margin-bottom: 50px;
+      }
+    }
+    padding: 140px 20px 0px 20px;
+    .decore {
+      top: -2px;
+      img {
+        width: 1100px;
+      }
+    }
+  }
+}
+@media(max-width : 1246px){
+  .about-page-main {
+    .about {
+      .title-text {
+        margin-bottom: 50px;
+      }
+    }
+    padding: 140px 20px 0px 20px;
+    .decore {
+      top: -2px;
+      img {
+        width: 1100px;
+      }
+    }
+  }
+}
+@media(max-width : 1227px){
+  .about-page-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .decore {
+      display: none;
+    }
+  }
+}
+@media(max-width : 870px){
+  .about-page-main {
+    .about {
+      width: 650px;
+      .title-text {
+        margin-bottom: 50px;
+      }
+      .tech-stack {
+        .tech-containers {
+          column-gap: 9px;
+        }
+      }
+    }
+    padding: 200px 20px 0px 20px;
+    .decore {
+      top: -2px;
+      img {
+        width: 1100px;
+      }
+    }
+  }
+}
+@media(max-width : 700px){
+  .about-page-main {
+    .about {
+      width: 600px;
+      .title-text {
+        margin-bottom: 50px;
+      }
+      .tech-stack {
+        .tech-containers {
+          column-gap: 9px;
+          .container {
+            width: 80px;
+            height: 70px;
+            .container-icon {
+              img {
+                width: 30px;
+                height: 30px;
+              }
+            }
+            .container-name {
+              p {
+                font-size: 13px;
+              }
+            }
+          }
+        }
+      }
+    }
+    padding: 200px 20px 0px 20px;
+    .decore {
+      top: -2px;
+      img {
+        width: 1100px;
+      }
+    }
+  }
+}
+@media(max-width : 640px){
+  .about-page-main {
+    .about {
+      width: 500px;
+      .title-text {
+        margin-bottom: 50px;
+        .about-text {
+          p {
+            font-size: 17px;
+            line-height: 21px;
+          }
+        }
+      }
+      .tech-stack {
+        .tech-containers {
+          column-gap: 10px;
+          flex-wrap: wrap;
+          row-gap: 10px;
+          .container {
+            width: 80px;
+            height: 70px;
+            .container-icon {
+              img {
+                width: 30px;
+                height: 30px;
+              }
+            }
+            .container-name {
+              p {
+                font-size: 13px;
+              }
+            }
+          }
+        }
+      }
+    }
+    padding: 200px 20px 0px 20px;
+    .decore {
+      top: -2px;
+      img {
+        width: 1100px;
+      }
+    }
+  }
+}
+@media(max-width : 492px){
+  .about-page-main {
+    .about {
+      width: 100%;
+      .title-text {
+        margin-bottom: 50px;
+      }
+      .tech-stack {
+        .tech-containers {
+          column-gap: 10px;
+          flex-wrap: wrap;
+          row-gap: 10px;
+          .container {
+            width: 80px;
+            height: 70px;
+            .container-icon {
+              img {
+                width: 30px;
+                height: 30px;
+              }
+            }
+            .container-name {
+              p {
+                font-size: 13px;
+              }
+            }
+          }
+        }
+      }
+    }
+    padding: 200px 20px 0px 20px;
+    .decore {
+      top: -2px;
+      img {
+        width: 1100px;
+      }
+    }
+  }
+}

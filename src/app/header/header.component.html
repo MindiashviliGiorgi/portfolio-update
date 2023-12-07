@@ -1,0 +1,30 @@
+<div class="header-main" [class.scroll_header]="header_variable">
+  <div class="header-left">
+    <h1 (click)="scrollHome()" style="cursor: pointer;">Portfolio GM</h1>
+  </div>
+  <div class="header-right">
+    <ul>
+      <li><p [class.home_active]="homeActive" (click)="scrollHome()">Home</p></li>
+      <li><p [class.about_active]="aboutActive" (click)="scrollAbout()">About</p></li>
+      <li><p [class.projects_active]="projectsActive" (click)="scrollProject()">Projects</p></li>
+      <li><p [class.contact_active]="contactActive" (click)="scrollContact()">Contact</p></li>
+    </ul>
+    <div class="burger-menu">
+      <img (click)="menu = true;" [src]="'/assets/images/burger.png'">
+    </div>
+  </div>
+</div>
+
+<div *ngIf="menu" class="menu">
+  <div class="menu-links">
+    <ul>
+      <span (click)="menu = false;">
+        <img [src]="'/assets/images/X.png'">
+      </span>
+      <li (click)="menu = false; scrollHome()">Home</li>
+      <li (click)="menu = false; scrollAbout()">About</li>
+      <li (click)="menu = false; scrollProject()">Projects</li>
+      <li (click)="menu = false; scrollContact()">Contact</li>
+    </ul>
+  </div>
+</div>
