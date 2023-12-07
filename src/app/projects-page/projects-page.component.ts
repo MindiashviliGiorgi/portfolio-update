@@ -10,9 +10,9 @@ export class ProjectsPageComponent {
 
   constructor(){}
 
-  ngOnInit():void {
+  ngOnInit():void {};
 
-  };
+  
 
   container: number = 1;
 

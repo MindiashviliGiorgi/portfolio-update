@@ -14,8 +14,10 @@
     width: 100%;
     height: auto;
     flex: 1;
+    left: -700px;
+    transition: 1s;
     position: relative;
-    animation: textOn 2s ease-in;
+    opacity: 0;
     .hey {
       display: flex;
       align-items: center;
@@ -71,10 +73,11 @@
   }
   .decore {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: -700px;
+    right: -700px;
     z-index: -1;
-    animation: decorationOn 1s ease-in;
+    opacity: 0;
+    transition: 1s;
     img {
       width: auto;
       height: 100vh;
@@ -83,28 +86,6 @@
   }
 }
 
-@keyframes textOn {
-  0% {
-    left: -700px;
-    opacity: 0;
-  }
-  50% {
-    left: 0;
-    opacity: 1;
-  }
-}
-
-@keyframes decorationOn {
-  0% {
-    top: -500px;
-    right: -500px;
-    opacity: 0;
-  }
-  50% {
-
-    opacity: 1;
-  }
-}
 
 @keyframes heyMove {
   0% {
