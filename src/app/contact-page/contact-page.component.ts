@@ -1,5 +1,6 @@
 import { Component, HostListener } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
+import emailjs from '@emailjs/browser';
 
 @Component({
   selector: 'app-contact-page',
@@ -21,9 +22,19 @@ export class ContactPageComponent {
 
   onSubmit() {
     const contactFormValue = this.contactForm.value;
-    console.log(contactFormValue)
+    this.send();
   }
 
-
+  async send() {
+    emailjs.init('Ww9NGizlR-ziTh9rQ')
+    let response = await emailjs.send("service_xo5ixmk","template_yjk4le9",{
+      fullName: this.contactForm.value.fullName,
+      email: this.contactForm.value.email,
+      message: this.contactForm.value.message,
+    });   
+    
+    alert("Message has been sent.")
+    this.contactForm.reset()
+  }
 
 }
