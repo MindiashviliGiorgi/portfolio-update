@@ -1,95 +1,25 @@
-.contact-main {
-  width: 0px;
+.contact-page-main {
+  width: 100%;
   height: auto;
-  background-color: #27F4E0;
-  position: absolute;
-  bottom: 0;
-  right: 450px;
-  z-index: 1;
   display: flex;
   align-items: center;
-  justify-content: left;
-  flex-direction: row;
-  column-gap: 20px;
-  padding: 10px 30px;
-  border-top-left-radius: 3px;
-  transition: 0.3s;
-  opacity: 0;
+  justify-content: center;
+  padding: 10px 150px;
+  flex-direction: column;
+  row-gap: 30px;
   .title {
-    h3 {
-      font-size: 20px;
+    width: 100%;
+    text-align: left;
+    h2 {
+      color: #27F4E0;
       font-weight: 500;
-      letter-spacing: 0.2px;
-      &:hover {
-        text-decoration: underline;
-      }
+      letter-spacing: 0.5px;
     }
   }
-  .git-in {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    column-gap: 15px;
-    opacity: 0;
-    transition: 0.3s;
-    a {
-      text-decoration: none;
-      img {
-        width: 40px;
-        height: 40px;
-        object-fit: cover;
-      }
-    }
-  }
-}
-.decoration_start {
-  width: 450px;
-  opacity: 1;
-  transition: 0.3s;
-  right: 0;
-  .git-in {
-    opacity: 1;
-    transition: 0.3s;
-  }
-}
-
-@media(max-width : 455px){
-  .contact-main {
-    .title {
-      h3 {
-        font-size: 17px;
-      }
-    }
-    .git-in {
-      a {
-        img {
-          width: 30px;
-          height: 30px;
-        }
-      }
-    }
-  }
-  .decoration_start {
-    width: 400px;
-  }
-}
-@media(max-width : 407px){
-  .contact-main {
-    .title {
-      h3 {
-        font-size: 17px;
-      }
-    }
-    .git-in {
-      a {
-        img {
-          width: 30px;
-          height: 30px;
-        }
-      }
-    }
-  }
-  .decoration_start {
-    width: 370px;
+  .contact-form {
+    width: 100%;
+    min-height: 400px;
+    border: 1px solid #27F4E0;
+    border-radius: 20px;
   }
 }
