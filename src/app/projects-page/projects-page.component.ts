@@ -25,13 +25,13 @@ export class ProjectsPageComponent {
     let calcHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
     let scrollValue = Math.round((pos * 100) / calcHeight);
 
-    if (scrollValue > 69) {
+    if (scrollValue > 59) {
       titleDiv.style.left = '0px';
       titleDiv.style.opacity = '1';
 
       projectsDiv.style.right = '0px';
       projectsDiv.style.opacity = '1';
-    } else if (scrollValue < 69) {
+    } else if (scrollValue < 59) {
       titleDiv.style.left = '-700px';
       titleDiv.style.opacity = '0';
 

@@ -1,10 +1,20 @@
 <div class="contact-page-main">
   <div class="title">
-    <h2>TITLE</h2>
+    <h2>CONTACT ME</h2><br>
+    <p>Recruiters, let's compose brilliance – text me for a symphony of web wonders!</p>
   </div>
   <div class="contact-form">
-    <form>
-        
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+        <div class="form-up">
+          <input type="text" placeholder="Full Name" formControlName="fullName">
+          <input type="email" placeholder="Email Adress" formControlName="email">
+        </div>
+        <div class="form-down">
+          <textarea placeholder="Message" formControlName="message"></textarea>
+        </div>
+        <div class="btn">
+          <button type="submit">Send</button>
+        </div>
     </form>
   </div>
 </div>
