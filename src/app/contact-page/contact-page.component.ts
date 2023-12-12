@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, ElementRef, HostListener } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import emailjs from '@emailjs/browser';
 
@@ -10,7 +10,7 @@ import emailjs from '@emailjs/browser';
 export class ContactPageComponent {
   contactForm: any;
 
-  constructor(private fb : FormBuilder) {
+  constructor(private fb : FormBuilder, private el : ElementRef) {
     this.contactForm = this.fb.group({
       fullName : [''],
       email : [''],
@@ -19,6 +19,18 @@ export class ContactPageComponent {
   }
 
   ngOnInit(): void {}
+
+  @HostListener("document:scroll")
+  onScrollAnimation() {
+    const titleDiv = this.el.nativeElement.querySelector('.title');
+    const contactFormDiv = this.el.nativeElement.querySelector('.contact-form"');
+
+    let pos = document.documentElement.scrollTop;
+    let calcHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    let scrollValue = Math.round((pos * 100) / calcHeight);
+
+
+  }
 
   onSubmit() {
     const contactFormValue = this.contactForm.value;

@@ -18,24 +18,32 @@ export class ProjectsPageComponent {
 
   @HostListener("document:scroll")
   onScrollAnimation() {
-    const titleDiv = this.el.nativeElement.querySelector('.projects-title');
-    const projectsDiv = this.el.nativeElement.querySelector('.projects-list');
+      const titleDiv = this.el.nativeElement.querySelector('.projects-title');
+      const projectsDiv = this.el.nativeElement.querySelector('.projects-list');
 
-    let pos = document.documentElement.scrollTop;
-    let calcHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    let scrollValue = Math.round((pos * 100) / calcHeight);
+      let pos = document.documentElement.scrollTop;
+      let calcHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      let scrollValue = Math.round((pos * 100) / calcHeight);
 
-    if (scrollValue > 59) {
+    if (scrollValue > 52) {
       titleDiv.style.left = '0px';
       titleDiv.style.opacity = '1';
 
       projectsDiv.style.right = '0px';
       projectsDiv.style.opacity = '1';
-    } else if (scrollValue < 59) {
+    } else if (scrollValue < 52) {
       titleDiv.style.left = '-700px';
       titleDiv.style.opacity = '0';
 
       projectsDiv.style.right = '-700px';
+      projectsDiv.style.opacity = '0';
+    };
+
+    if (scrollValue > 92) {
+      titleDiv.style.left = '-700px';
+      titleDiv.style.opacity = '0';
+
+      projectsDiv.style.right = '-700px'
       projectsDiv.style.opacity = '0';
     }
 

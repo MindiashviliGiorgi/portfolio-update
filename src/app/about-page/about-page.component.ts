@@ -26,20 +26,18 @@ export class AboutPageComponent {
     let pos = document.documentElement.scrollTop;
     let calcHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
     let scrollValue = Math.round((pos * 100) / calcHeight);
-    
+
     if (scrollValue < 18) {
       pageMainDiv.style.opacity = '0';
       pageMainDiv.style.transform = 'translateY(110px)';
     } else if (scrollValue >= 18) {
       pageMainDiv.style.opacity = '1';
       pageMainDiv.style.transform = 'translateY(0px)'
-      if (scrollValue > 69) {
-        pageMainDiv.style.opacity = '0';
-        pageMainDiv.style.transform = 'translateY(-110px)'
-      } else if (scrollValue < 69) {
-        pageMainDiv.style.opacity = '1';
-        pageMainDiv.style.transform = 'translateY(0px)'
-      }
+    };
+
+    if (scrollValue > 52) {
+      pageMainDiv.style.opacity = '0';
+      pageMainDiv.style.transform = 'translateY(-110px)';
     }
   }
 

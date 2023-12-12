@@ -37,14 +37,14 @@ export class HeaderComponent {
       this.homeActive = false;
     };
 
-    if(scrollValue > 46){
+    if(scrollValue > 30){
       this.homeActive = false;
       this.aboutActive = true;
     }else {
       this.aboutActive = false;
     };
 
-    if(scrollValue > 87){
+    if(scrollValue > 67){
       this.aboutActive = false;
       this.projectsActive = true;
     }else {
