@@ -10,6 +10,7 @@
   .title {
     width: 100%;
     text-align: left;
+    transition: 1s;
     h2 {
       color: #27F4E0;
       font-weight: 500;
@@ -26,7 +27,7 @@
     width: 100%;
     height: auto;
     box-shadow: 0px 0px 10px 0px #27F4E0;
-    transition: 3s;
+    transition: 1s;
     animation: formAnimation 1s ease-in-out infinite;
     border-radius: 20px;
     padding: 30px 40px;

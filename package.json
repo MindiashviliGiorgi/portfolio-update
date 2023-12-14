@@ -19,6 +19,8 @@
     "@angular/platform-browser-dynamic": "^16.0.0",
     "@angular/router": "^16.0.0",
     "@emailjs/browser": "^3.11.0",
+    "firebase": "^10.7.1",
+    "firebase-tools": "^13.0.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.0"

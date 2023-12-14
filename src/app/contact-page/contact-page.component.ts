@@ -23,11 +23,23 @@ export class ContactPageComponent {
   @HostListener("document:scroll")
   onScrollAnimation() {
     const titleDiv = this.el.nativeElement.querySelector('.title');
-    const contactFormDiv = this.el.nativeElement.querySelector('.contact-form"');
+    const contactFormDiv = this.el.nativeElement.querySelector('.contact-form');
 
     let pos = document.documentElement.scrollTop;
     let calcHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
     let scrollValue = Math.round((pos * 100) / calcHeight);
+
+    if (scrollValue < 86) {
+      titleDiv.style.opacity = '0';
+      titleDiv.style.transform = 'translateY(500px)';
+      contactFormDiv.style.opacity = '0';
+      contactFormDiv.style.transform = 'translateY(500px)';
+    } else if (scrollValue > 86) {
+      titleDiv.style.opacity = '1';
+      titleDiv.style.transform = 'translateY(0px)';
+      contactFormDiv.style.opacity = '1';
+      contactFormDiv.style.transform = 'translateY(0px)';
+    }
 
 
   }
