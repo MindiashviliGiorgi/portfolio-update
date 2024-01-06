@@ -62,7 +62,7 @@ export class ProjectsPageComponent {
   }
 
   nextContainer() {
-    if (this.container < 4) {
+    if (this.container < 5) {
       this.container++;
     }
   }

@@ -7,8 +7,42 @@
     </p>
   </div>
   <div class="projects-list">
-    <!-- GM Railway -->
     <div class="container fade" *ngIf="container === 1">
+      <div class="container-left">
+        <img class="hotel-img" [src]="'/assets/images/dzvell.jpg'"/>
+        <span class="of">Official Project</span>
+        <div class="decore">
+          <img [src]="'/assets/images/projects_corner.png'">
+        </div>
+      </div>
+      <div class="container-right">
+        <div class="title">
+          <h3>Hotel Dzvelubanshi</h3>
+        </div>
+        <div class="about">
+          <p>
+            Introducing Hotel Dzvelubanshi – our official project developed 
+            using Angular and Firebase. This feature-packed system includes 
+            a smooth booking process, an intuitive date picker, and a 
+            powerful admin panel with CRUD capabilities with a responsive 
+            searching and sorting system. While we can't share the GitHub URL for 
+            the code, rest assured that it reflects our commitment to excellence 
+            in web development.
+          </p>
+        </div>
+        <div class="tools">
+          <img [src]="'/assets/images/angular.png'">
+          <img [src]="'/assets/images/firebase.png'">
+        </div>
+        <div class="btns">
+          <button>
+            <a href="https://dzvel-ubanshi.web.app/" target="_blank">Live</a>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- GM Railway -->
+    <div class="container fade" *ngIf="container === 2">
       <div class="container-left">
         <img [src]="'/assets/images/rwc.jpg'"/>
         <div class="decore">
@@ -43,7 +77,7 @@
       </div>
     </div>
     <!-- TRAVEL MORE  -->
-    <div class="container fade" *ngIf="container === 2">
+    <div class="container fade" *ngIf="container === 3">
       <div class="container-left">
         <img [src]="'/assets/images/MyTravelMorePic.jpg'"/>
         <div class="decore">
@@ -79,7 +113,7 @@
       </div>
     </div>
     <!-- PROJECT 4 -->
-    <div class="container fade" *ngIf="container === 3">
+    <div class="container fade" *ngIf="container === 4">
       <div class="container-left">
         <img [src]="'/assets/images/project-4-.bmp'"/>
         <div class="decore">
@@ -118,7 +152,7 @@
       </div>
     </div>
     <!-- GMF SHOP -->
-    <div class="container fade" *ngIf="container === 4">
+    <div class="container fade" *ngIf="container === 5">
       <div class="container-left">
         <img [src]="'/assets/images/ff.bmp'"/>
         <div class="decore">
@@ -160,7 +194,7 @@
         <img src="/assets/images/arrow.png">
       </button>
     </div>
-    <div class="next-btn" *ngIf="container < 4">
+    <div class="next-btn" *ngIf="container < 5">
       <button (click)="nextContainer()">
         <img src="/assets/images/arrow.png">
       </button>
@@ -175,6 +209,7 @@
       <div class="dot fade" (click)="container = 2" [class.dot_active]="container === 2"></div>
       <div class="dot fade" (click)="container = 3" [class.dot_active]="container === 3"></div>
       <div class="dot fade" (click)="container = 4" [class.dot_active]="container === 4"></div>
+      <div class="dot fade" (click)="container = 5" [class.dot_active]="container === 5"></div>
       <div class="dots-btn">
         <button (click)="nextContainer()">
           <img src="/assets/images/arrow.png" style="transform: rotate(0deg);">
